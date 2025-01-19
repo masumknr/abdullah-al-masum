@@ -10,9 +10,77 @@
     />
     <script src="https://kit.fontawesome.com/cd65aa1133.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css" />
+    <style>
+      .mobile-navbar {
+            display: none; /* Hidden by default on large screens */
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+        }
+
+        .mobile-navbar .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-navbar .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #444;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.9s ease-in-out;
+        }
+
+        .mobile-navbar .menu.show {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mobile-navbar .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        .mobile-navbar .menu a:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Styles for Small Devices */
+        @media (max-width: 768px) {
+            .mobile-navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
   </head>
   <body>
     <div class="left-sidebar">
+
+      <div class="mobile-navbar">
+        <h1>MASUM</h1>
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    
       <img src="./images/author-image.jpg" alt="Author Image" />
       <h1>Masum</h1>
       <p>Lorem ipsum dolor sit amet.<br />Lorem ipsum dolor sit amet.</p>
@@ -267,11 +335,12 @@
 
 
 
-    <script>
-      function toggleMobileMenu() {
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenu.classList.toggle('active');
-      }
-    </script>
+    
+<script>
+  function toggleMenu() {
+      const menu = document.querySelector('.mobile-navbar .menu');
+      menu.classList.toggle('show');
+  }
+</script>
   </body>
 </html>
