@@ -14,7 +14,7 @@
   <body>
     <div class="grid md:grid-cols-4 gap-4 px-4">
       <section class="left-sidebar sm:col-span-1 md:col-span-1">
-        <nav class="">
+        <!-- <nav class="">
             <div>
                 <h2>Masum</h2>
             </div>
@@ -44,8 +44,15 @@
               >
             </li>
           </ul>
-        </nav>
-        <div>
+        </nav> -->
+        <!-- Navbar for small screens -->
+    <nav class="bg-white shadow-md md:hidden fixed top-0 left-0 w-full z-10">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+          <h1 class="text-lg font-bold">Masum</h1>
+          <button id="menu-btn" class="text-xl">&#9776;</button>
+      </div>
+  </nav>
+        <!-- <div>
           <div>
             <img src="./images/author-image.jpg" alt="Author Image" />
             <h2>Masum</h2>
@@ -61,7 +68,20 @@
           <div>
             <button class="hire-me">Hire Me</button>
           </div>
-        </div>
+        </div> -->
+        <!-- Left Sidebar (Fixed on Large Screens) -->
+        <aside class="md:w-1/4 bg-white shadow-lg p-6 text-center md:fixed md:h-screen md:top-0 md:left-0 md:overflow-hidden">
+          <img src="masum.PNG" alt="Masum" class="rounded-lg mx-auto w-32 h-32 object-cover border">
+          <h2 class="mt-4 text-xl font-bold">Masum</h2>
+          <div class="flex justify-center mt-2 space-x-3">
+              <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-xl"><i class="fab fa-github"></i></a>
+              <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+          <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Hire Me</button>
+      </aside>
+
       </section>
       <section class="right-sidebar sm:col-span-1 md:col-span-3">
         <div class="hero-section" id="home">
