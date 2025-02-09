@@ -1,343 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Al Masum</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script
-      src="https://kit.fontawesome.com/cd65aa1133.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <link rel="stylesheet" href="style/style.css"> -->
-  </head>
-  <body>
-    <div class="grid md:grid-cols-4 gap-4 px-4">
-      <section class="left-sidebar sm:col-span-1 md:col-span-1">
-        <!-- <nav class="">
-            <div>
-                <h2>Masum</h2>
-            </div>
-          <ul class="flex md:hidden">
-            <li>
-              <a href="#home"
-                ><i class="fa-solid fa-house"></i>
-                <span class="tooltip">Home</span></a
-              >
-            </li>
-            <li>
-              <a href="#home"
-                ><i class="fa-solid fa-house"></i>
-                <span class="tooltip">Home</span></a
-              >
-            </li>
-            <li>
-              <a href="#home"
-                ><i class="fa-solid fa-house"></i>
-                <span class="tooltip">Home</span></a
-              >
-            </li>
-            <li>
-              <a href="#home"
-                ><i class="fa-solid fa-house"></i>
-                <span class="tooltip">Home</span></a
-              >
-            </li>
-          </ul>
-        </nav> -->
-        <!-- Navbar for small screens -->
-    <nav class="bg-white shadow-md md:hidden fixed top-0 left-0 w-full z-10">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-          <h1 class="text-lg font-bold">Masum</h1>
-          <button id="menu-btn" class="text-xl">&#9776;</button>
-      </div>
-  </nav>
-        <!-- <div>
-          <div>
-            <img src="./images/author-image.jpg" alt="Author Image" />
-            <h2>Masum</h2>
-          </div>
-          <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/masumknr/" target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="#"><i class="fa-brands fa-square-github"></i></a>
-            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-          </div>
-          <div>
-            <button class="hire-me">Hire Me</button>
-          </div>
-        </div> -->
-        <!-- Left Sidebar (Fixed on Large Screens) -->
-        <aside class="md:w-1/4 bg-white shadow-lg p-6 text-center md:fixed md:h-screen md:top-0 md:left-0 md:overflow-hidden">
-          <img src="masum.PNG" alt="Masum" class="rounded-lg mx-auto w-32 h-32 object-cover border">
-          <h2 class="mt-4 text-xl font-bold">Masum</h2>
-          <div class="flex justify-center mt-2 space-x-3">
-              <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
-              <a href="#" class="text-xl"><i class="fab fa-github"></i></a>
-              <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
-          </div>
-          <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Hire Me</button>
-      </aside>
-
-      </section>
-      <section class="right-sidebar sm:col-span-1 md:col-span-3">
-        <div class="hero-section" id="home">
-          <div>
-            <h2>Say Hi from Masum</h2>
-            <p>
-              Skilled PCB designer specializing in creating efficient,
-              high-quality printed circuit board layouts for electronics,
-              ensuring performance and reliability.
-            </p>
-          </div>
-          <div class="complited-projects grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            <div class="box">
-              <h2>12+</h2>
-              <p>Projects</p>
-            </div>
-            <div class="box">
-              <h2>12+</h2>
-              <p>Projects</p>
-            </div>
-            <div class="box">
-              <h2>12+</h2>
-              <p>Projects</p>
-            </div>
-            <div class="box">
-              <h2>12+</h2>
-              <p>Projects</p>
-            </div>
-          </div>
-        </div>
-        <nav class="navbar">
-          <a href="#home"
-            ><i class="fa-solid fa-house"></i>
-            <span class="tooltip">Home</span>
-          </a>
-          <a href="#about"
-            ><i class="fa-regular fa-user"></i
-            ><span class="tooltip">About</span></a
-          >
-          <a href="#services"
-            ><i class="fa-solid fa-sliders"></i
-            ><span class="tooltip">Services</span></a
-          >
-          <a href="#skills"
-            ><i class="fa-solid fa-list-check"></i
-            ><span class="tooltip">Skills</span></a
-          >
-          <a href="#projects"
-            ><i class="fa-solid fa-bars-progress"></i
-            ><span class="tooltip">Projects</span></a
-          >
-          <a href="#contact"
-            ><i class="fa-solid fa-id-badge"></i
-            ><span class="tooltip">Contact</span></a
-          >
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col lg:flex-row">
+        <!-- Mobile Navbar -->
+        <nav class="lg:hidden bg-gray-900 text-white p-4 flex justify-between fixed w-full top-0 z-10">
+            <h1 class="text-xl">Masum</h1>
+            <button id="menuToggle" class="text-white">☰</button>
         </nav>
-
-        <div class="about" id="about">
-          <h2>About Me</h2>
-          <p>
-            I am an Electronics and Embedded Systems Engineer with expertise in circuit design, analysis, troubleshooting, and embedded system development. Proficient in microcontrollers like Arduino, ESP32, and NodeMCU, I excel in programming with C and C++.</p>
+        <ul id="mobileMenu" class="hidden bg-gray-800 text-white sticky top-12 flex flex-col p-3 mt-12">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <!-- Left Sidebar -->
+        <aside class="w-full lg:w-64 bg-gray-900 text-white p-5 lg:fixed lg:h-full mt-16 lg:mt-0">
+          <div class="hidden md:flex">
+            <h1 class="text-2xl font-bold">Masum</h1>
+        </div>
+            <div class="mt-5 flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" class="rounded-full" alt="Profile Image">
+                <h2 class="mt-3 text-xl font-semibold">John Doe</h2>
+                <div class="flex space-x-3 mt-3">
+                    <a href="#" class="text-blue-500">FB</a>
+                    <a href="#" class="text-blue-300">TW</a>
+                    <a href="#" class="text-red-500">IG</a>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Right Side Content -->
+        <main class="lg:ml-64 w-full mt-16 lg:mt-0 flex">
+            <!-- Fixed Right Sidebar Navbar -->
+            <nav class="hidden lg:flex flex-col fixed right-0 top-1/4 bg-white shadow-md p-4 space-y-4">
+                <a href="#home" class="hover:text-blue-500">Home</a>
+                <a href="#about" class="hover:text-blue-500">About</a>
+                <a href="#skills" class="hover:text-blue-500">Skills</a>
+                <a href="#projects" class="hover:text-blue-500">Projects</a>
+                <a href="#contact" class="hover:text-blue-500">Contact</a>
+            </nav>
             
-            <p>Skilled in PCB design, including schematics, library creation, and layout optimization, I use tools like Altium, EasyEDA, Proteus, and PlatformIO to deliver efficient solutions. Passionate about innovation, I am committed to creating impactful, real-world engineering solutions.
-          </p>
-        </div>
-        <div id="services">
-          <h2>Services</h2>
-          <div class="service">
-            <div class="left-side">
-              <h3>PCB Design</h3>
-              <ul>
-                <li>ECAD tools: Altium Designer, EAGLE, KiCad.</li>
-                <li>Schematic capture, library creation, and maintenance.</li>
-                <li>Complex, mixed-signal, multi-layer PCBs (12+ layers, HDI).</li>
-                <li>BGA designs (down to 0.5mm pitch).</li>
-                <li>High-speed, sensitive, and high I/O-count designs (RF, FPGA,
-                  DDR3, PCIe, USB3).</li>
-                <li>Design for EMC and signal integrity.</li>
-                <li>Mechanical considerations, shielding, connector I/O layout.</li>
-                <li>Stack-up and build-up design, controlled impedance.</li>
-                <li>Production file generation and ordering.</li>
-                <li>Component sourcing, communication with fab and assembly houses.</li>
-              </ul>
+            <!-- Main Content -->
+            <div class="flex-1">
+                <section id="home" class=" max-w-6xl mx-auto p-6 lg:h-screen flex items-center justify-center bg-cover bg-center text-white text-3xl font-bold" style="background-image: url('/images/pcb-cover.jpg');">
+                    <div>
+                        <div>
+                          <h2>Say Hi from Masum</h2>
+                          <p>
+                            Skilled PCB designer specializing in creating efficient,
+                            high-quality printed circuit board layouts for electronics,
+                            ensuring performance and reliability.
+                          </p>
+                        </div>
+                        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                          <div>
+                            <h2>12+</h2>
+                            <p>Projects</p>
+                          </div>
+                          <div>
+                            <h2>12+</h2>
+                            <p>Projects</p>
+                          </div>
+                          <div>
+                            <h2>12+</h2>
+                            <p>Projects</p>
+                          </div>
+                          <div>
+                            <h2>12+</h2>
+                            <p>Projects</p>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+                <!-- About section  -->
+                <section id="about" class="max-w-6xl mx-auto p-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+                        <p>
+                          I am an Electronics and Embedded Systems Engineer with expertise in circuit design, analysis, troubleshooting, and embedded system development. Proficient in microcontrollers like Arduino, ESP32, and NodeMCU, I excel in programming with C and C++.</p>
+                          
+                          <p>Skilled in PCB design, including schematics, library creation, and layout optimization, I use tools like Altium, EasyEDA, Proteus, and PlatformIO to deliver efficient solutions. Passionate about innovation, I am committed to creating impactful, real-world engineering solutions.
+                        </p>
+                      </div>
+                </section>
+                <!-- Service section  -->
+                <section id="services" class="max-w-6xl mx-auto p-6">
+                    <h2 class="text-3xl font-bold text-center mb-8">Services</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                      <div>
+                        <h3 class="text-2xl font-semibold mb-4">PCB Design</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                          <li>ECAD tools: Altium Designer, EAGLE, KiCad.</li>
+                          <li>Schematic capture, library creation, and maintenance.</li>
+                          <li>Complex, mixed-signal, multi-layer PCBs (12+ layers, HDI).</li>
+                          <li>BGA designs (down to 0.5mm pitch).</li>
+                          <li>High-speed, sensitive, and high I/O-count designs (RF, FPGA, DDR3, PCIe, USB3).</li>
+                          <li>Design for EMC and signal integrity.</li>
+                          <li>Mechanical considerations, shielding, connector I/O layout.</li>
+                          <li>Stack-up and build-up design, controlled impedance.</li>
+                          <li>Production file generation and ordering.</li>
+                          <li>Component sourcing, communication with fab and assembly houses.</li>
+                        </ul>
+                      </div>
+                      <img src="./images/service-pcb-design.jpg" alt="PCB Design" class="w-full rounded-lg shadow-lg" />
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                      <div>
+                        <h3 class="text-2xl font-semibold mb-4">Circuit Design</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>System-level design and requirements capture.</li>
+                            <li>Part selection.</li>
+                            <li>Analogue (power, audio, RF) and digital (MCU, FPGAs/SoCs, ..)
+                              circuit design.</li>
+                            <li>Simulation.</li>
+                            <li>In-house tests (full-equipped electronic lab available).</li>
+                        </ul>
+                      </div>
+                      <img src="./images/Service_Circuit design.jpg" alt="Circuit Design" class="w-full rounded-lg shadow-lg" />
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                      <div>
+                        <h3 class="text-2xl font-semibold mb-4">Embedded Firmware</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Pin-out planning for MCUs, FPGAs, and SoCs.</li>
+                            <li>Driver generation for peripherals.</li>
+                            <li>Board bring-up.</li>
+                            <li>Languages: C/C++, VHDL.</li>
+                        </ul>
+                      </div>
+                      <img src="./images/Service_embedded firmware.png" alt="Embedded Firmware" class="w-full rounded-lg shadow-lg" />
+                    </div>
+                  </section>
+                  <section id="skills" class="max-w-6xl mx-auto p-6">
+                    <h2 class="text-3xl font-bold text-center mb-8">Skills & Tools</h2>
+                    <div class="flex w-full">
+                        <div class="w-1/2 p-4">
+                            <h3 class="text-2xl font-semibold mb-4">Skills</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center space-x-2">
+                                    <img src="./icons/chip.png" alt="PCB Design" class="w-6 h-6">
+                                    <span class="text-lg">PCB Design</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <img src="./icons/pcb-board.png" alt="Embedded System Design" class="w-6 h-6">
+                                    <span class="text-lg">Embedded System Design</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2 p-4">
+                            <h3 class="text-2xl font-semibold mb-4">Tools</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center space-x-2">
+                                    <img src="./icons/chip.png" alt="VS Code" class="w-6 h-6">
+                                    <span class="text-lg">VS Code</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <img src="./icons/pcb-board.png" alt="Figma" class="w-6 h-6">
+                                    <span class="text-lg">Figma</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <img src="./icons/pcb-board.png" alt="Dev Tools" class="w-6 h-6">
+                                    <span class="text-lg">Dev Tools</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="services" class="max-w-6xl mx-auto p-6">
+                    <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+                    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <img src="" alt="project1">
+                            <h3 class="text-2xl font-semibold mb-4">Project 1</h3>
+                            <p class="text-gray-700">Description of project 1.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <img src="" alt="project2">
+                            <h3 class="text-2xl font-semibold mb-4">Project 2</h3>
+                            <p class="text-gray-700">Description of project 2.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <img src="" alt="project3">
+                            <h3 class="text-2xl font-semibold mb-4">Project 3</h3>
+                            <p class="text-gray-700">Description of project 3.</p>
+                        </div>
+                    </div>
+                  </section>
                 
-            </div>
-            <div class="right-side">
-              <img src="./images/service-pcb-design.jpg" alt="PCB Design" />
-            </div>
-          </div>
-          <div class="service">
-            <div class="left-side">
-              <img src="./images/Service_Circuit design.jpg" alt="Circuit Design" />
-            </div>
-            <div class="right-side">
-              <h3>Circuit Design</h3>
-              <ul>
-                <li>System-level design and requirements capture.</li>
-                <li>Part selection.</li>
-                <li>Analogue (power, audio, RF) and digital (MCU, FPGAs/SoCs, ..)
-                  circuit design.</li>
-                <li>Simulation.</li>
-                <li>In-house tests (full-equipped electronic lab available).</li>
-              </ul>
-              
-            </div>
-          </div>
-  
-          <div class="service">
-            <div class="left-side">
-              <h3>Embedded Firmware</h3>
-              <ul>
-                <li>Pin-out planning for MCUs, FPGAs, and SoCs.</li>
-                <li>Driver generation for peripherals.</li>
-                <li>Board bring-up.</li>
-                <li>Languages: C/C++, VHDL.</li>
-              </ul>
-            </div>
-            <div class="right-side">
-              <img src="./images/Service_embedded firmware.png" alt="Embedded Firmware" />
-            </div>
-          </div>
-        </div>
-
-        <div id="skills" >
-          <div class="skills">
-            <div class="skill">
-              <h2>Skills</h2>
-              <div class="skill-item">
-                  <div class="single-skill">
-                    <img src="./icons/chip.png" alt="PCB Design">
-                    <span>PCB DESIGN</span>
+                <section class="flex justify-center items-center min-h-screen">
+                  <div class="w-full max-w-2xl bg-white shadow-lg rounded-lg p-6">
+                      <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+                      <form class="space-y-4">
+                          <div>
+                              <label class="block text-lg font-medium" for="name">Name</label>
+                              <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                          </div>
+                          <div>
+                              <label class="block text-lg font-medium" for="email">Email</label>
+                              <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                          </div>
+                          <div>
+                              <label class="block text-lg font-medium" for="message">Message</label>
+                              <textarea id="message" rows="4" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                          </div>
+                          <div class="flex justify-center">
+                              <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600">Send Message</button>
+                          </div>
+                      </form>
                   </div>
-                  <div class="single-skill">
-                    <img src="./icons/pcb-board.png" alt="PCB Design">
-                    <span>PCB DESIGN</span>
-                  </div>
-                  <div class="single-skill">
-                    <img src="./icons/pcb-board.png" alt="PCB Design">
-                    <span>embedded system design</span>
-                  </div>
-              </div>
+              </section>
             </div>
-            <div class="tools">
-              <h2>Tools</h2>
-              <div class="tool-item">
-                <div class="single-tool">
-                  <img src="./icons/chip.png" alt="PCB Design">
-                  <span>PCB DESIGN</span>
-                </div>
-                <div class="single-skill">
-                  <img src="./icons/pcb-board.png" alt="PCB Design">
-                  <span>PCB DESIGN</span>
-                </div>
-                <div class="single-skill">
-                  <img src="./icons/pcb-board.png" alt="PCB Design">
-                  <span>PCB DESIGN</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="projects ">
-          <h2>Projects</h2>
-          <div class="projects grid sm:grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card ">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/Linkedin.png" alt="Card Image" />
-              <div class="card-content">
-                <h3>Title</h3>
-                <p>Short description goes here...</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section id="contact" class="contact-section">
-          <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or projects in mind, feel free to get in touch!</p>
-            <form class="contact-form">
-              <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-          </div>
-        </section>
-
-
-
-
-
-      </section>
-      
+        </main>
     </div>
-  </body>
+    
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+</body>
 </html>
